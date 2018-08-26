@@ -1,0 +1,7 @@
+<?php /* @var Magento\Catalog\Block\Product\View\Description */
+    $product = $block->getProduct();
+    $question = $product->getData('question');
+    $subQuestion = substr ($question , 0 , 5);
+    $keyword = strrev($subQuestion);
+?>
+<p>KEYWORD: <?php echo $keyword ?></p>
