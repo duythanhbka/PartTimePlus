@@ -1,0 +1,27 @@
+<?php
+    /* @var \Magenest\PartTimePlus2\Block\Answer */
+    $questions = $block->getQuestions();
+    $orderCollection = $block->getOrderCollection();
+    $orderData = $orderCollection->getData();
+?>
+
+<div id="answer-div" data-bind="scope:'answer'">
+
+         <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "answer": {
+                            "component": "Magenest_PartTimePlus2/js/answer",
+                            "order_data": <?=json_encode($orderData)?>,
+                            "question": <?=json_encode($questions)?>
+                        }
+                   }
+                }
+            }
+        }
+</script>
+

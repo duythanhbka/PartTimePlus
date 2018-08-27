@@ -9,7 +9,7 @@ namespace Magenest\PartTimePlus2\Plugin;
 
 class CheckCartPlugin
 {
-    public function afterHasItems(\Magento\Quote\Model\Quote $subject, $result)
+    public function afterHasItems($subject, $result)
     {
         $items = $subject->getData('items');
         foreach ($items as $item) {

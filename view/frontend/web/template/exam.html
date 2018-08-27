@@ -1,0 +1,8 @@
+
+<select data-bind="foreach: orderList , event:{ change: changeOption}">
+    <option data-bind="text: entity_id"></option>
+</select>
+
+<select data-bind="foreach: questions">
+    <option data-bind="text: $data"></option>
+</select>
